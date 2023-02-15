@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 		{
 			if (execve(arr[0], arr, NULL) == -1)
 			{
-				perror("./readline");
+				perror("./shell");
 				return (1);
 			}
 			execve(arr[0], arr, NULL);
