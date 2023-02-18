@@ -5,14 +5,16 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 
-// main - A program that prints "$ ", wait for the user to enter a command, prints it on the next line.
   
 int main(int argc, char **argv)
 {
+//	printing prompt and taking input from the user variable declearation
 	char *command = NULL;
 	size_t len = 0;
+	//string token pointer variable
 	char *stkn;
 	pid_t my_pid;
+	//wait process variable declearation
 	int status, i;
 	
 	while (1)
@@ -35,6 +37,7 @@ int main(int argc, char **argv)
 			arr[i] = stkn;
 			i++;
 		}
+		//creating child process
 
 		my_pid = fork();
 		if (my_pid == -1)
